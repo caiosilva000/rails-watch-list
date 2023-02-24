@@ -73,3 +73,4 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "rest-client"
 
+gem 'bootstrap', '~> 5.2.2'
