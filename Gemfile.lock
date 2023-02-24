@@ -76,6 +76,7 @@ GEM
       tzinfo (~> 2.0)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
+    aws_cf_signer (0.1.3)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -84,6 +85,9 @@ GEM
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    cloudinary (1.25.0)
+      aws_cf_signer
+      rest-client (>= 2.0.0)
     concurrent-ruby (1.2.0)
     crass (1.0.6)
     date (3.3.3)
@@ -263,6 +267,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap (~> 5.2.2)
+  cloudinary
   debug
   dotenv-rails
   font-awesome-sass (~> 6.1)
