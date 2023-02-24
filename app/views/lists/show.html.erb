@@ -4,5 +4,19 @@
 
 <%= link_to "New bookmark", new_list_bookmark_path(@list) %>
 <% @bookmarks.each do |bookmark| %>
-    <%= bookmark.comment %>- <%= bookmark.movie.title %> <%= link_to "delete bookmark", list_bookmark_path(@list, bookmark), data: { turbo_method: :delete } %>
+    <%= bookmark.comment %>- <%= bookmark.movie.title %> <%= link_to "delete bookmark", list_bookmark_path(@list, bookmark), data: { turbo_method: :delete, turbo_confirm: "dont you dare" } %>
+<% end %>
+
+
+<% @lists.each do |list| %>
+    <%= list.name %> <%= link_to "delete list", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "dont you dare"} %>
+<% end %>
+
+
+
+
+
+
+<% @movie.photos.each do |movie| %>
+  <%= cl_image_tag movie.key, height: 300, width: 400, crop: :fill %>
 <% end %>

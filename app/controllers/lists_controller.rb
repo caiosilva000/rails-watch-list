@@ -14,14 +14,22 @@ class ListsController < ApplicationController
   end
 
   def show
+    @lists = List.all
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks
+    @movie = Movie.find(params[:bookmark][:movie_id])
+    @bookmark.movie = @movie
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to root_path()
+end
 
   private
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :title, :body, :photo, :movie_id)
   end
 end
