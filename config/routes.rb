@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :articles, except: :index  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root to: "lists#index"
+  resources :articles  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :lists, only: [:show, :create, :edit, :new, :destroy] do
     resources :bookmarks, only: [:new, :create, :destroy]
   end
