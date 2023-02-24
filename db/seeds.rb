@@ -29,8 +29,4 @@ repos["results"].each do |e|
   puts e["poster_path"]
   puts e["vote_average"]
   Movie.create(title: e["original_title"], overview: e["overview"], poster_url: "https://image.tmdb.org/t/p/original///#{e["poster_path"]}", rating: e["vote_average"])
-
-
 end
-
-
